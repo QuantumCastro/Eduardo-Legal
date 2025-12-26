@@ -1,0 +1,15 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import LegalLanding from "../../components/estrada/App";
+import { buildSeo } from "../../lib/seo";
+import { setLanguage } from "../../stores/language";
+import type { Language } from "../../data/estrada-legal";
+
+const lang: Language = "en";
+setLanguage(lang);
+const seo = buildSeo(lang);
+---
+
+<BaseLayout lang={lang} seo={seo}>
+  <LegalLanding client:load />
+</BaseLayout>

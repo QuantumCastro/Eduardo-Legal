@@ -1,0 +1,54 @@
+---
+import type { SeoPayload } from "../../lib/seo";
+
+const { seo } = Astro.props as { seo: SeoPayload };
+---
+
+<title>{seo.title}</title>
+<meta name="description" content={seo.description} />
+<meta
+  name="robots"
+  content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
+/>
+<meta
+  name="googlebot"
+  content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
+/>
+<meta name="author" content={seo.og.siteName} />
+<meta name="application-name" content={seo.og.siteName} />
+
+<link rel="canonical" href={seo.canonical} />
+{seo.alternates.map((link) => <link rel="alternate" hreflang={link.hreflang} href={link.href} />)}
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content={seo.og.siteName} />
+<meta property="og:title" content={seo.og.title} />
+<meta property="og:description" content={seo.og.description} />
+<meta property="og:url" content={seo.og.url} />
+<meta property="og:image" content={seo.og.image.url} />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content={String(seo.og.image.width)} />
+<meta property="og:image:height" content={String(seo.og.image.height)} />
+<meta property="og:image:alt" content={seo.og.image.alt} />
+<meta property="og:locale" content={seo.og.locale} />
+{seo.og.localeAlternates.map((locale) => <meta property="og:locale:alternate" content={locale} />)}
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content={seo.twitter.handle} />
+<meta name="twitter:title" content={seo.twitter.title} />
+<meta name="twitter:description" content={seo.twitter.description} />
+<meta name="twitter:image" content={seo.twitter.image.url} />
+<meta name="twitter:image:alt" content={seo.twitter.image.alt} />
+
+<link
+  rel="preload"
+  as="image"
+  href={seo.preloadImage.href}
+  imagesizes="(min-width: 768px) 50vw, 100vw"
+  fetchpriority="high"
+/>
+
+<meta name="theme-color" content="#0b1120" media="(prefers-color-scheme: dark)" />
+<meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)" />
+
+<script type="application/ld+json" is:inline set:html={JSON.stringify(seo.jsonLd)} />
