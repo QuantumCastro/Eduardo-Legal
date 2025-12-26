@@ -8,7 +8,7 @@ const ErrorFallback = () => {
   return (
     <section className="flex min-h-screen items-center justify-center bg-slate-950 px-6 py-16">
       <div className="w-full max-w-xl rounded-sm border border-slate-800 bg-slate-900/60 p-8 text-center shadow-2xl">
-        <p className="text-xs uppercase tracking-[0.3em] text-amber-600">Estrada Legal</p>
+        <p className="text-xs uppercase tracking-[0.3em] text-amber-600">Eduardo Legal</p>
         <h1 className="mt-4 text-3xl font-semibold text-white md:text-4xl">{t.errors.title}</h1>
         <p className="mt-4 text-sm text-slate-400 md:text-base">{t.errors.message}</p>
 

@@ -1,4 +1,4 @@
-# Estrada Legal Static Site
+# Eduardo Legal Static Site
 
 Static marketing site built with Astro, React, and Tailwind, focused on top-tier SEO, bilingual content, and fast static delivery.
 

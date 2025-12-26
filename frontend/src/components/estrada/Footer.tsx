@@ -13,7 +13,7 @@ export const Footer = () => {
           </span>
           <p className="sr-only">{t.footer.desc}</p>
           <div className="hidden h-3 w-px bg-slate-800 md:block" />
-          <p className="opacity-75">© 2026 Estrada Legal. {t.footer.rights}</p>
+          <p className="opacity-75">© 2026 eduardo Legal. {t.footer.rights}</p>
         </div>
 
         <div className="flex items-center gap-6">
