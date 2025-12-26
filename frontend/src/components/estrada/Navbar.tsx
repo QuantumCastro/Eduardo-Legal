@@ -59,7 +59,7 @@ export const Navbar = () => {
             </span>
           </span>
           <span className="font-display text-2xl tracking-wide text-slate-100 transition-colors duration-300 group-hover:text-amber-500">
-            ESTRADA{" "}
+            EDUARDO{" "}
             <span className="text-amber-700 transition-colors duration-300 group-hover:text-slate-100">
               LEGAL
             </span>
