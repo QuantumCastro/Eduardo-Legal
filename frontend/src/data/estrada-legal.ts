@@ -207,7 +207,7 @@ const rawTranslations = {
       formName: "Nombre Completo",
       formEmail: "Correo Corporativo",
       formDetails: "Detalles del Caso",
-      placeholderName: "Eduardo Abogado..",
+      placeholderName: "Eduardo Abogado",
       placeholderEmail: "correo@empresa.com",
       placeholderDetails: "...",
       formButton: "SOLICITAR CONSULTA",
@@ -417,13 +417,13 @@ export const languagePaths = {
 } as const satisfies Record<Language, string>;
 
 export const contactInfo = {
-  address: "Av. Reforma 222, Torre Mayor, Piso 45",
-  city: "Ciudad de México, CDMX",
-  locality: "Ciudad de México",
-  region: "CDMX",
-  country: "MX",
+  address: "Av.2, Torre Mercedes, Piso 4",
+  city: "Sán José, CR",
+  locality: "San José",
+  region: "San José",
+  country: "CR",
   email: "contacto@EduardoLegal.com",
-  phone: "+52 (55) 1234-5678",
+  phone: "+506 00000000",
 } as const;
 
 export const mediaAssets = {
